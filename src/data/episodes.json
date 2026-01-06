@@ -1,0 +1,28 @@
+[
+    { "seasonId": "1", "episodeNumber": 1, "title": "A New Day", "description": "Lee Everett meets young Clementine and they begin their journey together.", "duration": 120 },
+    { "seasonId": "1", "episodeNumber": 2, "title": "Starved for Help", "description": "The group must deal with food shortage and make difficult decisions.", "duration": 115 },
+    { "seasonId": "1", "episodeNumber": 3, "title": "Long Road Ahead", "description": "Tensions rise within the group as they face betrayal.", "duration": 110 },
+    { "seasonId": "1", "episodeNumber": 4, "title": "Around Every Corner", "description": "The group arrives in Savannah searching for a boat.", "duration": 125 },
+    { "seasonId": "1", "episodeNumber": 5, "title": "No Time Left", "description": "Lee must rescue Clementine in the dramatic season finale.", "duration": 130 },
+
+    { "seasonId": "2", "episodeNumber": 1, "title": "All That Remains", "description": "Clementine is now on her own and must survive in a harsh world.", "duration": 115 },
+    { "seasonId": "2", "episodeNumber": 2, "title": "A House Divided", "description": "Clementine joins a new group and faces difficult choices.", "duration": 120 },
+    { "seasonId": "2", "episodeNumber": 3, "title": "In Harm's Way", "description": "The group is captured and must find a way to escape.", "duration": 125 },
+    { "seasonId": "2", "episodeNumber": 4, "title": "Amid the Ruins", "description": "After their escape, the group tries to rebuild.", "duration": 110 },
+    { "seasonId": "2", "episodeNumber": 5, "title": "No Going Back", "description": "Clementine makes her most important decision yet.", "duration": 135 },
+
+    { "seasonId": "3", "episodeNumber": 1, "title": "Ties That Bind - Part 1", "description": "Meet Javier García as he tries to keep his family together.", "duration": 120 },
+    { "seasonId": "3", "episodeNumber": 2, "title": "Ties That Bind - Part 2", "description": "Javier's family faces new threats from The New Frontier.", "duration": 115 },
+    { "seasonId": "3", "episodeNumber": 3, "title": "Above the Law", "description": "Javier must navigate complex political situations.", "duration": 125 },
+    { "seasonId": "3", "episodeNumber": 4, "title": "Thicker Than Water", "description": "Family loyalties are tested to their limits.", "duration": 120 },
+    { "seasonId": "3", "episodeNumber": 5, "title": "From the Gallows", "description": "The final confrontation that will determine everyone's fate.", "duration": 130 },
+
+    { "seasonId": "4", "episodeNumber": 1, "title": "Done Running", "description": "Clementine finds a new home at Ericson's Boarding School.", "duration": 125 },
+    { "seasonId": "4", "episodeNumber": 2, "title": "Suffer the Children", "description": "The school faces a dangerous threat from raiders.", "duration": 120 },
+    { "seasonId": "4", "episodeNumber": 3, "title": "Broken Toys", "description": "Clementine must lead a daring rescue mission.", "duration": 130 },
+    { "seasonId": "4", "episodeNumber": 4, "title": "Take Us Back", "description": "Clementine's journey comes to an emotional conclusion.", "duration": 140 },
+
+    { "seasonId": "michonne", "episodeNumber": 1, "title": "In Too Deep", "description": "Michonne joins a sailing crew and faces a hostile community.", "duration": 90 },
+    { "seasonId": "michonne", "episodeNumber": 2, "title": "Give No Shelter", "description": "Michonne must escape from dangerous captors.", "duration": 85 },
+    { "seasonId": "michonne", "episodeNumber": 3, "title": "What We Deserve", "description": "Michonne confronts her past and finds closure.", "duration": 95 }
+]

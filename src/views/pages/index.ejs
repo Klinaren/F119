@@ -1,0 +1,90 @@
+<%- include('../partials/header') %>
+
+<div class="hero">
+    <h1><%= title %></h1>
+    <p>Choose Season which you want to see...</p>
+</div>
+
+<div class="filter-section">
+    <form method="GET" action="/" class="filter-form">
+        <div class="filter-group">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" value="<%= filters.search || '' %>" placeholder="Search seasons...">
+        </div>
+
+        <div class="filter-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status">
+                <option value="">All</option>
+                <option value="completed" <%= filters.status === 'completed' ? 'selected' : '' %>>Completed</option>
+                <option value="ongoing" <%= filters.status === 'ongoing' ? 'selected' : '' %>>Ongoing</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="minRating">Min Rating:</label>
+            <input type="number" id="minRating" name="minRating" min="0" max="10" step="0.1" value="<%= filters.minRating || '' %>" placeholder="0-10">
+        </div>
+
+        <div class="filter-group">
+            <label for="sortBy">Sort By:</label>
+            <select id="sortBy" name="sortBy">
+                <option value="date" <%= filters.sortBy === 'date' ? 'selected' : '' %>>Release Date</option>
+                <option value="rating" <%= filters.sortBy === 'rating' ? 'selected' : '' %>>Rating</option>
+            </select>
+        </div>
+
+        <div class="filter-group">
+            <label for="order">Order:</label>
+            <select id="order" name="order">
+                <option value="desc" <%= filters.order === 'desc' ? 'selected' : '' %>>Descending</option>
+                <option value="asc" <%= filters.order === 'asc' ? 'selected' : '' %>>Ascending</option>
+            </select>
+        </div>
+
+        <div class="filter-actions">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+            <a href="/" class="btn btn-secondary">Clear</a>
+        </div>
+    </form>
+</div>
+
+<main>
+    <div class="results-info">
+        <p>Found <%= seasons.length %> season(s)</p>
+        <a href="/admin/seasons" class="btn btn-admin">Manage Seasons</a>
+    </div>
+
+    <% if (seasons && seasons.length > 0) { %>
+        <ul class="seasons-grid">
+            <% seasons.forEach(season => { %>
+            <li class="season-card">
+                <a href="/season/<%= season.seasonId %>">
+                    <div class="season-image-container">
+                        <img src="<%= season.image %>" alt="<%= season.title %>" class="episode-image" loading="lazy">
+                        <div class="season-overlay">
+                            <span class="view-details">View Details</span>
+                        </div>
+                        <div class="season-rating">Rating: <%= season.rating %></div>
+                    </div>
+                    <div class="season-content">
+                        <h2><%= season.title %></h2>
+                        <p><%= season.description %></p>
+                        <div class="season-meta">
+                            <span class="meta-item">Release Date: <%= season.releaseDate %></span>
+                            <span class="meta-item status-<%= season.status %>"><%= season.status %></span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <div class="no-results">
+            <h2>No seasons found</h2>
+            <p>Try adjusting your filters or search criteria.</p>
+        </div>
+    <% } %>
+</main>
+
+<%- include('../partials/footer') %>

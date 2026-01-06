@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+
+<div class="episode-hero">
+    <div class="episode-hero-content">
+        <div class="breadcrumb">
+            <a href="/">Home</a> / 
+            <a href="/season/<%= season.seasonId %>"><%= season.title %></a> / 
+            Episode <%= episode.id %>
+        </div>
+        <h1><%= episode.title %></h1>
+        <p class="episode-number">Episode <%= episode.id %> of <%= season.title %></p>
+    </div>
+</div>
+
+<main class="episode-details-container">
+    <div class="episode-content">
+        <div class="episode-description-card">
+            <h2>Episode Description</h2>
+            <p><%= episode.description %></p>
+        </div>
+
+        <div class="episode-navigation">
+            <% const currentIndex = season.episodes.findIndex(ep => ep.id === episode.id); %>
+            <% if (currentIndex > 0) { %>
+                <a href="/season/<%= season.seasonId %>/episode/<%= season.episodes[currentIndex - 1].id %>" class="btn btn-nav">
+                    ← Previous Episode
+                </a>
+            <% } %>
+            
+            <a href="/season/<%= season.seasonId %>" class="btn btn-secondary">
+                Back to Season
+            </a>
+
+            <% if (currentIndex < season.episodes.length - 1) { %>
+                <a href="/season/<%= season.seasonId %>/episode/<%= season.episodes[currentIndex + 1].id %>" class="btn btn-nav">
+                    Next Episode →
+                </a>
+            <% } %>
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

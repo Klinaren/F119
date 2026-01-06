@@ -1,0 +1,49 @@
+<%- include('../partials/header') %>
+
+<main class="container">
+    <div class="season-detail-header">
+        <div class="season-image-large">
+            <img src="<%= season.image %>" alt="<%= season.title %>">
+        </div>
+        
+        <div class="season-info-text">
+            <h1><%= season.title %></h1>
+            <div class="season-meta-row">
+                <span class="status-badge status-<%= season.status %>"><%= season.status %></span><br>
+                <span class="rating-tag">Rating: <%= season.rating %>/10</span><br>
+                <span class="date-tag">Release Date: <%= season.releaseDate %></span>
+            </div>
+            <p class="description-text"><%= season.description %></p>
+        </div>
+    </div>
+
+    <section class="episodes-section">
+        <div class="section-header">
+            <h2>Episodes</h2>
+            <a href="/admin/seasons/<%= season.seasonId %>/episodes" class="btn btn-primary btn-small">Manage Episodes</a>
+        </div>
+
+        <% if (episodes && episodes.length > 0) { %>
+            <div class="episodes-list">
+                <% episodes.forEach((episode) => { %>
+                <div class="episode-card">
+                    <div class="episode-header">
+                        <span class="episode-number">Episode <%= episode.episodeNumber %></span><br>
+                        <span class="episode-duration"> Duration:  <%= episode.duration %> min</span><br>
+                    </div>
+                    <h3><%= episode.title %></h3>
+                    <p><%= episode.description %></p>
+                </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <p class="no-data">No episodes available for this season.</p>
+        <% } %>
+    </section>
+
+    <div class="back-link">
+        <a href="/" class="btn btn-secondary">← Back to All Seasons</a>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

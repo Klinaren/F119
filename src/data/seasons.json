@@ -1,0 +1,7 @@
+[
+  { "seasonId": "1", "title": "Season 1", "description": "A New Day - the beginning of Clementine's story", "image": "/images/seasonOne.jpg", "releaseDate": "2012-04-24", "rating": 9.5, "status": "completed" },
+  { "seasonId": "2", "title": "Season 2", "description": "All That Remains - Clementine must survive on her own", "image": "/images/seasonTwo.jpg", "releaseDate": "2013-12-17", "rating": 9.0, "status": "completed" },
+  { "seasonId": "3", "title": "Season 3 - A New Frontier", "description": "Meet Javier García and his family", "image": "/images/seasonThree.jpg", "releaseDate": "2016-12-20", "rating": 8.5, "status": "completed" },
+  { "seasonId": "4", "title": "Season 4 - The Final Season", "description": "The final chapter in Clementine's story", "image": "/images/seasonFour.webp", "releaseDate": "2018-08-14", "rating": 9.8, "status": "completed" },
+  { "seasonId": "michonne", "title": "Michonne Mini-Series", "description": "Discover what Michonne was up to", "image": "/images/seasonMishone.jpg", "releaseDate": "2016-02-23", "rating": 8.0, "status": "completed" }
+]

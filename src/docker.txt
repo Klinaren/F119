@@ -1,0 +1,15 @@
+INSTRUKCJA URUCHOMIENIA BAZY DANYCH (MONGODB) W DOCKERZE:
+
+Aby przygotować środowisko pod przyszłą migrację na bazę MongoDB:
+
+1. Pobranie obrazu i uruchomienie kontenera:
+   docker run -d --name twdg-db -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=secret mongo
+
+2. Dane logowania:
+   - Host: localhost
+   - Port: 27017
+   - Użytkownik: admin
+   - Hasło: secret
+
+3. Połączenie z aplikacją (Connection String):
+   mongodb://admin:secret@localhost:27017/twdg_db?authSource=admin
